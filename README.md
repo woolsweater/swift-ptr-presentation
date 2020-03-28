@@ -1,3 +1,5 @@
+theme: Oyster
+
 # Unsafe at any Swift
 
 ### _Or, how to win friends and corrupt memory_
