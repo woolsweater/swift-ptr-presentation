@@ -1,5 +1,7 @@
 theme: Oyster
 
+<!-- This is a Deckset presentation. Lines that start with ^ are hidden notes to help me remember what I wanted to say when presenting. -->
+
 # Unsafe at any Swift
 
 ### _Or, how to win friends and corrupt memory_
