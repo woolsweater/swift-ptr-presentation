@@ -369,15 +369,27 @@ let vals = bytes.assumingMemoryBound(to: Int32.self)
 # `Unsafe(Mutable)BufferPointer`
 - Represents contiguous memory
 - `Collection` interface
-- Cannot create directly; must have already-allocated pointer
+- Can create directly:
 
 ```swift
-let count = 10
+let buf = UnsafeMutableBufferPointer<Int8>.allocate(capacity: count)
+```
+
+---
+
+## Get on the buf(fer)!
+
+# `Unsafe(Mutable)BufferPointer`
+- Represents contiguous memory
+- `Collection` interface
+- Can create directly, or by wrapping an existing allocation:
+
+```swift
 let base = UnsafeMutablePointer<Int8>.allocate(capacity: count)
 let buf = UnsafeMutableBufferPointer(start: base, count: count)
 ```
 
-^ As noted in the docs, the buffer does not own the memory, although strangely you can deallocate through it.
+^ As noted in the docs, the buffer pointer does not own the memory, although you can deallocate through it.
 
 ---
 
